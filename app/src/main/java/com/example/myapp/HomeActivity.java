@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import static android.R.layout.simple_list_item_1;
+import static com.example.myapp.R.layout.row_listview;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -34,12 +35,15 @@ public class HomeActivity extends AppCompatActivity {
             Log.w(TAG, "onCreate");
 
 
-            ListView countriesListView = findViewById(R.id.countriesListview);
-            ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                    simple_list_item_1, //layout file of each row in the listview
-                    languages);
-            countriesListView.setAdapter(adapter);
+
         }
+        ListView countriesListView = findViewById(R.id.countriesListview);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                // simple_list_item_1,
+                R.layout.row_listview,//layout file of each row in the listview
+                languages);
+
+        countriesListView.setAdapter(adapter);
 
     }
     @Override
