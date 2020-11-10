@@ -19,12 +19,14 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = getIntent();
        /* getting extras from intent*/
         Bundle extras = intent.getExtras();
-       /* from extras get the string with key = mykey*/
-        String data = extras.getString("mykey");
-       /* put string extracted into textview*/
-        TextView resultsTextView = findViewById(R.id.textView);
-        resultsTextView.setText(data);
-        Log.w(TAG,"onCreate");
+        if(extras!= null) {
+            /* from extras get the string with key = mykey*/
+            String data = extras.getString("mykey");
+            /* put string extracted into textview*/
+            TextView resultsTextView = findViewById(R.id.textView);
+            resultsTextView.setText(data);
+            Log.w(TAG, "onCreate");
+        }
     }
     @Override
     protected void onStart() {
