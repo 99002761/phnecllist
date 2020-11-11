@@ -1,6 +1,7 @@
 package com.example.myapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -14,6 +15,8 @@ public class RecyclerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recycler);
         languagesData = new String[]{"english","telugu","hindi","tamil","kannada"};
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
-        MyAdapter adapter = new MyAdapter(languagesData);
+        MyAdapter adapter = new MyAdapter(this,languagesData);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
     }
 }
