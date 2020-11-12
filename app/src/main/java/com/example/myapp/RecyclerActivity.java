@@ -15,8 +15,8 @@ public class RecyclerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recycler);
         languagesData = new String[]{"english","telugu","hindi","tamil","kannada"};
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
-        MyAdapter adapter = new MyAdapter(this,languagesData);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
+//        MyAdapter adapter = new MyAdapter(this,languagesData);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerView.setAdapter(adapter);
     }
 }
